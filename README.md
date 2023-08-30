@@ -2,6 +2,11 @@
 
 OneNoteSyncScheduler is a Python-based tool designed to facilitate the synchronization and backup of your notes and schedules, particularly with Google services. This tool uses various scripts to automate the synchronization process and make it more seamless.
 
+
+# Demonstration
+[Video](https://clipchamp.com/watch/Bs5MTVJb81R)
+
+
 ## Features
 
 - **Google Services Integration**: The `Google.py` script allows for easy integration with Google APIs for authentication and access to services like Google Sheets.
