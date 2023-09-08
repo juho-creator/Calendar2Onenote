@@ -1,9 +1,42 @@
-# Code Mechanism
-1. G_OAuth.py <br>
-Google Calendar API authenticates google account of user to obtain calendar events
+# OneNote Scheduler
 
-3. M_OAuth.py <br>
-MSAL (Microsoft Authentication Library) is used to authenticate microsoft account of user
+This program creates a OneNote scheduler with Google Calendar events.
 
-4. OneNote.py <br>
-Onenote API is used to create a onenote with calendar events
+## Demonstration of OneNote Scheduler
+
+<!-- Add demonstration content here if applicable -->
+
+## How to Use the Program
+
+### First-time Setup
+
+1. **Download**: Obtain OneNoteScheduler from the [Download link].
+
+2. **Run**: After installation, double-click the OneNoteScheduler application.
+
+3. **Google Login**: Sign in with your Google account.
+
+4. **Sync Google Calendar**: Authorize access to fetch Google Calendar events.
+
+5. **Microsoft Login**: Log in using your Microsoft account.
+
+6. **Sync OneNote**: Authorize access to OneNote.
+
+7. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
+
+### Subsequent Use (When logged in)
+
+1. **Run**: Double-click the OneNoteScheduler executable.
+
+2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
+
+## Technologies Used
+
+- [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko): 
+  - `G_OAuth.py` - Authenticates Google accounts and fetches calendar events.
+  
+- [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python): 
+  - `M_OAuth.py` - Authenticates Microsoft accounts.
+  
+- [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2): 
+  - `OneNote.py` - Creates a OneNote notebook with calendar events.
