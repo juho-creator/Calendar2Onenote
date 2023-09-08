@@ -34,27 +34,26 @@ This program creates a OneNote scheduler with Google Calendar events.
 
 ## Authentication and API Flow Diagrams
 
-### Google OAuth2.0
+### Google OAuth2.0 (G_OAuth.py)
 [Google OAuth2.0 Documentation](https://developers.google.com/workspace/guides/auth-overview?hl=ko)
 
 ![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
-- Authenticates Google account users without needing their credentials.
-- Authorizes OneNoteScheduler (3rd-party app) to access Google Calendar information using the Google Calendar API.
+- Google OAuth2.0 authenticates Google account users without the need for their credentials.
+- It also authorizes OneNoteScheduler, a 3rd-party app, to access Google Calendar information using the Google Calendar API.
 
-<br><br>
-
-### Microsoft Account Authentication & Microsoft Graph API
+### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py,OneNote.py)
 [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
 
 ![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
-- Authenticates Microsoft account users without needing their credentials.
-- Authorizes OneNoteScheduler (3rd-party app) to write Google Calendar events to OneNote using the Microsoft Graph API.
+- MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
+- Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
 
 
 
-## Technologies Used
+
+## Technologies Used 
 
 - [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko): 
   - `G_OAuth.py` - Authenticates Google accounts and fetches calendar events.
