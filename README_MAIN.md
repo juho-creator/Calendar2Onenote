@@ -30,6 +30,15 @@ This program creates a OneNote scheduler with Google Calendar events.
 
 2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
 
+
+## Authentication and API Flow Diagrams
+[Google Account Authentication using Google Workspace API](https://developers.google.com/workspace/guides/auth-overview?hl=ko) <br>
+![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
+
+[Microsoft Account Authentication & Microsoft Graph API](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
+![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
+
+
 ## Technologies Used
 
 - [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko): 
