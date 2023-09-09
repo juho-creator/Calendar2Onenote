@@ -1,3 +1,6 @@
+# DISCLAIMER 
+# !! FOllOWING PROGRAM (v1.0, v2.0) IS OLD VERSION, WITH UPDATED PROGRAM WITHOUT KEYBOARD AUTOMATION UNDER DEVELOPMENT !!
+
 # OneNote Scheduler
 
 **Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
@@ -69,3 +72,4 @@
   - **Documentation**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
   - **Module**: `OneNote.py`
   - **Function**: Creates a OneNote notebook with calendar events.
+ 
