@@ -1,5 +1,10 @@
 from office365.graph_client import GraphClient
 from M_OAuth import generate_access_token
+from pprint import pprint
+import os
+import base64
+import requests
+from M_OAuth import generate_access_token
 
 APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
 SCOPES = [
@@ -10,17 +15,6 @@ SCOPES = [
     "Notes.ReadWrite.All",
     "Notes.ReadWrite.CreatedByApp"
 ]
-
-
-
-
-from pprint import pprint
-import os
-import base64
-import requests
-from M_OAuth import generate_access_token
-
-# SCOPES = ["User.Read","Notes.Read.All"]
 
 
 def draft_attachment(file_path):
@@ -37,7 +31,6 @@ def draft_attachment(file_path):
         'name': os.path.basename(file_path)
     }
     return data_body
-
 
 
 access_token = generate_access_token(APP_ID, SCOPES)
@@ -61,7 +54,7 @@ notebook = response.json()
 notebook_id = notebook["id"]
 
 
-
+#  ------ UNDER DEVELOPMENT ------
 # # Generate Section
 section_endpoint = GRAPH_ENDPOINT + f'/me/onenote/notebooks/{notebook_id}/sections'
 response = requests.post(section_endpoint, headers=headers, json=request_body)
@@ -71,22 +64,22 @@ section_id = notebook["id"]
 # # Generate Page
 page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
 
-request_body = {
-    """
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>A page with a block of HTML</title>
-    </head>
-    <body>
-        <p>This page contains some <i>formatted</i> <b>text</b>.</p>
-    </body>
-    </html>
-    """
-}
+# request_body = {
+#     """
+#     <!DOCTYPE html>
+#     <html>
+#     <head>
+#         <title>A page with a block of HTML</title>
+#     </head>
+#     <body>
+#         <p>This page contains some <i>formatted</i> <b>text</b>.</p>
+#     </body>
+#     </html>
+#     """
+# }
 
-response = requests.post(page_endpoint, headers=headers, json=request_body)
-pprint(response.text)
+# response = requests.post(page_endpoint, headers=headers, json=request_body)
+# pprint(response.text)
 
 
 # if response.status_code == 202:
