@@ -1,60 +1,71 @@
-# OneNoteSyncScheduler
+# OneNote Scheduler
 
-OneNoteSyncScheduler is a Python-based tool designed to facilitate the synchronization and backup of your notes and schedules, particularly with Google services. This tool uses various scripts to automate the synchronization process and make it more seamless.
+**Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
 
+## Demonstration
 
-# Demonstration
-[Video](https://clipchamp.com/watch/Bs5MTVJb81R)
-
-
-## Features
-
-- **Google Services Integration**: The `Google.py` script allows for easy integration with Google APIs for authentication and access to services like Google Sheets.
-
-- **OAuth Handling**: The `OAuth.py` script handles OAuth authentication with the Google Calendar API and retrieves events from the user's primary calendar.
-
-## Prerequisites
-
-- Python 3.x
-
-## Setup
-
-1. Clone the repository.
-
-2. Install required dependencies:
-
-
-3. Configure your `credentials.json` file for Google API access.
-
-4. Run the main script:
-
+<!-- Add demonstration content here if applicable -->
 
 ## Usage
 
-The `main.py` script launches OneNote and creates a schedule for the year 2023.
+### First-time Setup
 
-## Code Files
+1. **Download**: Obtain OneNoteScheduler from the [Download link].
 
-### `Google.py`
+2. **Installation**: After downloading, double-click the OneNoteScheduler application to install it.
 
-This script provides a helper function for creating Google API services and managing authentication tokens. It facilitates integration with Google services like Google Sheets.
+3. **Google Login**: Sign in to your Google account.
 
-### `OAuth.py`
+4. **Sync Google Calendar**: Authorize access to fetch Google Calendar events.
 
-This script uses the functions from `Google.py` to handle OAuth authentication and retrieve events from the user's primary Google Calendar.
+5. **Microsoft Login**: Log in using your Microsoft account.
 
-### `main.py`
+6. **Sync OneNote**: Authorize access to OneNote.
 
-This script uses the `subprocess` and `typer` modules to open OneNote and create a schedule for the year 2023.
+7. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
 
-### `typer.py`
+### Subsequent Use (When logged in)
 
-A module for handling command-line interfaces with the `typer` library.
+1. **Run**: Double-click the OneNoteScheduler executable.
 
-## Contributing
+2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
 
-Contributions are welcome! Please create an issue or pull request for any improvements or bug fixes.
+## Authentication and API Flow Diagrams
 
-## License
+### Google OAuth2.0 & Google Calendar API (G_OAuth.py)
+- **Documentation**: [Google OAuth2.0 Documentation](https://developers.google.com/workspace/guides/auth-overview?hl=ko), [Google Calendar API Documentation](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
+<br> ![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+- **Process**:
+  - Google OAuth2.0 authenticates Google account users without the need for their credentials.
+  - It also authorizes OneNoteScheduler, a 3rd-party app, to access Google Calendar information using the Google Calendar API. <br>
+
+### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
+- **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
+
+<br> ![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
+
+### OneNote API development stack <br> ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
+
+
+
+- **Process**:
+  - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
+  - Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
+
+## Technologies Used 
+
+- **Google Calendar API**: 
+  - **Documentation**: [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
+  - **Module**: `G_OAuth.py`
+  - **Function**: Authenticates Google accounts and fetches calendar events.
+  
+- **Microsoft Authentication Library (MSAL)**: 
+  - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
+  - **Modules**: `M_OAuth.py`
+  - **Function**: Authenticates Microsoft accounts.
+  
+- **Microsoft Graph API**: 
+  - **Documentation**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
+  - **Module**: `OneNote.py`
+  - **Function**: Creates a OneNote notebook with calendar events.
