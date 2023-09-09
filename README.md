@@ -42,16 +42,17 @@
 
 ### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
 - **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
+  
 
 <br> ![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
-
+- **Process**:
+  - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
+  - Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
+    
 ### OneNote API development stack <br> ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
 
 
 
-- **Process**:
-  - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
-  - Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
 
 ## Technologies Used 
 
