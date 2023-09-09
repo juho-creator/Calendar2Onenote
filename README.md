@@ -49,8 +49,9 @@
   - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
   - Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
     
-### OneNote API development stack <br> ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-
+### OneNote API development stack <br>
+- **Documentation**: [OneNote REST AP Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
+![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
 
 
 
