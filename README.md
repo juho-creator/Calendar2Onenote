@@ -10,7 +10,7 @@
 
 ### First-time Setup
 
-1. **Download**: Obtain OneNoteScheduler from the [Download link].
+1. **Download**: Install OneNoteScheduler from the [Download link].
 
 2. **Installation**: After downloading, double-click the OneNoteScheduler application to install it.
 
@@ -37,7 +37,7 @@
 <br> ![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
 - **Process**:
-  - Google OAuth2.0 authenticates Google account users without the need for their credentials.
+  - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials.
   - It also authorizes OneNoteScheduler, a 3rd-party app, to access Google Calendar information using the Google Calendar API. <br>
 
 ### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
