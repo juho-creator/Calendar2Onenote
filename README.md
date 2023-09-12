@@ -38,21 +38,20 @@
 
 - **Process**:
   - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials.
-  - This authorizes OneNoteScheduler(3rd-party app) to access user's Google Calendar information using the Google Calendar API. <br>
+  - Once user authorize access to their Google Calendar events, OneNoteScheduler(3rd-party app)is able to get user calendar events using the Google Calendar API. <br>
 
 ### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
 - **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
 <br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
-  - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
-  - OneNoteScheduler is given authority to create a new notebook on user's notebook using Microsoft Graph API.
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) account users without OneNoteScheduler having to need user credentials
+  - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app)is able to create Onenote Notebook. <br>
     
 ### OneNote API development stack <br>
 - **Documentation**: [OneNote REST AP Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-- Once users Microsoft Account is verified, OneNoteScheduler is ready to o create onenote page with all the google calendar events usin microsoft graph api that includes onenote api.
-- 
+- After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api.
 
 
 
@@ -60,14 +59,18 @@
 - **Google Calendar API**: 
   - **Documentation**: [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
   - **Module**: `G_OAuth.py`
-  - **Function**: Authenticates Google accounts and fetches calendar events.
+  - **Function**: Authenticates Google account and fetches calendar events.
   
 - **Microsoft Authentication Library (MSAL)**: 
   - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
   - **Modules**: `M_OAuth.py`
-  - **Function**: Authenticates Microsoft accounts.
+  - **Function**: Authenticates Microsoft account.
   
 - **Microsoft Graph API**: 
   - **Documentation**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
   - **Module**: `OneNote.py`
   - **Function**: Creates a OneNote notebook with calendar events.
+
+
+
+## Reference
