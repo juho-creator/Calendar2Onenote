@@ -34,8 +34,7 @@
 
 ### Google OAuth2.0 & Google Calendar API (G_OAuth.py)
 - **Documentation**: [Google OAuth2.0 Documentation](https://developers.google.com/workspace/guides/auth-overview?hl=ko), [Google Calendar API Documentation](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
-<br>
-![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
+<br>![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
 - **Process**:
   - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials.
@@ -43,8 +42,7 @@
 
 ### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
 - **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
-<br>
-![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
+<br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
   - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
