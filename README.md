@@ -34,29 +34,31 @@
 
 ### Google OAuth2.0 & Google Calendar API (G_OAuth.py)
 - **Documentation**: [Google OAuth2.0 Documentation](https://developers.google.com/workspace/guides/auth-overview?hl=ko), [Google Calendar API Documentation](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
-<br> ![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
+<br>
+![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
 - **Process**:
   - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials.
-  - It also authorizes OneNoteScheduler, a 3rd-party app, to access Google Calendar information using the Google Calendar API. <br>
+  - This authorizes OneNoteScheduler(3rd-party app) to access user's Google Calendar information using the Google Calendar API. <br>
 
 ### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
 - **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
-  
+<br>
+![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
-<br> ![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 - **Process**:
   - MSAL utilizes OAuth 2.0 for authenticating Microsoft account users, eliminating the need for their credentials.
-  - Additionally, it grants authorization to OneNoteScheduler, a 3rd-party app, allowing it to write Google Calendar events to OneNote using the Microsoft Graph API.
+  - OneNoteScheduler is given authority to create a new notebook on user's notebook using Microsoft Graph API.
     
 ### OneNote API development stack <br>
 - **Documentation**: [OneNote REST AP Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
+- Once users Microsoft Account is verified, OneNoteScheduler is ready to o create onenote page with all the google calendar events usin microsoft graph api that includes onenote api.
+- 
 
 
 
 ## Technologies Used 
-
 - **Google Calendar API**: 
   - **Documentation**: [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
   - **Module**: `G_OAuth.py`
