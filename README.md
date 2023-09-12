@@ -49,7 +49,7 @@
   - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app)is able to create Onenote Notebook. <br>
     
 ### OneNote API development stack <br>
-- **Documentation**: [OneNote REST AP Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
+- **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
 - After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api.
 
