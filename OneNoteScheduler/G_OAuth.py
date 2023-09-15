@@ -1,12 +1,11 @@
 import datetime
 import os.path
-from pprint import pprint
-
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
+from pprint import pprint
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
@@ -42,7 +41,7 @@ def retrieve_schedule(year):
         end_datetime = datetime.datetime.strptime(end_date, '%Y-%m-%d').isoformat() + 'Z'
 
         print(f'Fetching events for the year {year}')
-        events = []
+        events = {}
         page_token = None
 
         while True:
@@ -54,7 +53,15 @@ def retrieve_schedule(year):
             if not current_page_events:
                 break
 
-            events.extend(current_page_events)
+            for event in current_page_events:
+                start = event['start'].get('dateTime', event['start'].get('date'))
+                event_summary = event.get('summary', 'No summary available')
+
+                if start not in events:
+                    events[start] = []
+
+                events[start].append(event_summary)
+
             page_token = events_result.get('nextPageToken')
 
             if not page_token:
@@ -62,7 +69,7 @@ def retrieve_schedule(year):
 
         if not events:
             print(f'No events found for the year {year}.')
-            return []
+            return {}
 
         return events
 
@@ -70,19 +77,8 @@ def retrieve_schedule(year):
         print('An error occurred: %s' % error)
 
 
-
-def test():
+if __name__ == '__main__':
     # Example usage:
     year = 2023
     events = retrieve_schedule(year)
-
-    # Print the events within the specified year
-    i = 1
-    for event in events:
-        start = event['start'].get('dateTime', event['start'].get('date'))
-        event_summary = event.get('summary', 'No summary available')
-        print(i, start, event_summary)
-        i += 1
-
-test()
-
+    pprint(events)
