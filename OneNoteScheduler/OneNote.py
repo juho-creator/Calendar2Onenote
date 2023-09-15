@@ -1,11 +1,9 @@
-from office365.graph_client import GraphClient
 from M_OAuth import generate_access_token
 from pprint import pprint
-import os
-import base64
 import requests
-from M_OAuth import generate_access_token
+import bleach
 
+# Setup for Azure AD
 APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
 SCOPES = [
     "Notes.Create",
@@ -17,76 +15,77 @@ SCOPES = [
 ]
 
 
-def draft_attachment(file_path):
-    if not os.path.exists(file_path):
-        print('file is not found')
-        return
-    
-    with open(file_path, 'rb') as upload:
-        media_content = base64.b64encode(upload.read())
-        
-    data_body = {
-        '@odata.type': '#microsoft.graph.fileAttachment',
-        'contentBytes': media_content.decode('utf-8'),
-        'name': os.path.basename(file_path)
-    }
-    return data_body
 
-
+# Generate access token
 access_token = generate_access_token(APP_ID, SCOPES)
-
-
 headers = {
     'Authorization': 'Bearer ' + access_token['access_token']
 }
 
-
+# Base Graph Endpoint
 GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0'
 
+
 # Generate Notebook
-notebook_endpoint = GRAPH_ENDPOINT + '/me/onenote/notebooks'
-request_body = {
-    "displayName": "por favor"
-}
+def CreateNoteBook(year):
+    # Create Notebook
+    notebook_endpoint = GRAPH_ENDPOINT + '/me/onenote/notebooks'
+    request_body = {
+        "displayName": year
+    }
 
-response = requests.post(notebook_endpoint, headers=headers, json=request_body)
-notebook = response.json()
-notebook_id = notebook["id"]
+    response = requests.post(notebook_endpoint, headers=headers, json=request_body)
+    notebook = response.json()
+    notebook_id = notebook["id"]
 
+    # Return Notebook ID
+    return notebook_id
 
-#  ------ UNDER DEVELOPMENT ------
-# # Generate Section
-section_endpoint = GRAPH_ENDPOINT + f'/me/onenote/notebooks/{notebook_id}/sections'
-response = requests.post(section_endpoint, headers=headers, json=request_body)
-section = response.json()
-section_id = notebook["id"]
+# Generate Section
+def CreateSection(month,notebook_id):
+    # Create Section
+    section_endpoint = GRAPH_ENDPOINT + f'/me/onenote/notebooks/{notebook_id}/sections'
+    request_body = {
+        "displayName": month
+    }
+    response = requests.post(section_endpoint, headers=headers, json=request_body)
+    section = response.json()
+    pprint(section)
+    section_id = section["id"]
 
-# # Generate Page
-page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
-
-# request_body = {
-#     """
-#     <!DOCTYPE html>
-#     <html>
-#     <head>
-#         <title>A page with a block of HTML</title>
-#     </head>
-#     <body>
-#         <p>This page contains some <i>formatted</i> <b>text</b>.</p>
-#     </body>
-#     </html>
-#     """
-# }
-
-# response = requests.post(page_endpoint, headers=headers, json=request_body)
-# pprint(response.text)
+    #  Return Section ID
+    return section_id
 
 
-# if response.status_code == 202:
-#     print('Success')
-# else: 
-#     print(response.reason)
 
-# pprint(notebook.text)
-# pprint(section.text)
-# pprint(page.text)
+
+# Generate Page
+def CreatePage(day, events, date, section_id):
+    # Create Page
+    headers = {
+        'Authorization': 'Bearer ' + access_token['access_token'],
+        'Content-type': 'text/html; charset=utf-8'  # Set charset to UTF-8
+    }
+
+    # Get page endpoint
+    page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
+
+    # Check for matching values
+    matching_values = [bleach.clean(event) for key, value in events.items() for event in value if date in key]
+    print(date,matching_values)
+
+    if matching_values:
+        value_html = "".join([f"<p data-tag='to-do'>{value}</p>" for value in matching_values])
+
+        # Encode the HTML data as UTF-8
+        html = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body>{value_html}</body></html>'
+        html_encoded = html.encode('utf-8')
+    else:
+        html_encoded = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body></body></html>'.encode('utf-8')
+
+    response = requests.post(page_endpoint, headers=headers, data=html_encoded)
+    page = response.json()
+    pprint(page)
+
+
+
