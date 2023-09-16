@@ -86,6 +86,3 @@ def CreatePage(day, events, date, section_id):
     response = requests.post(page_endpoint, headers=headers, data=html_encoded)
     page = response.json()
     pprint(page)
-
-
-
