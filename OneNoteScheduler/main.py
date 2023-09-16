@@ -4,7 +4,6 @@ import inflect
 import calendar
 from G_OAuth import retrieve_schedule
 import webbrowser
-import os
 from flask import Flask, request, render_template
 
 # Setting up date tracker
