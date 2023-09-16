@@ -1,10 +1,12 @@
 # OneNote Scheduler
 
 **Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
+<br><br>
 
 ## Demonstration
 [Demonstration video](https://www.youtube.com/watch?v=uWZCjEYZeM4)
 <!-- Add demonstration content here if applicable -->
+<br>
 
 ## Usage
 
@@ -23,12 +25,14 @@
 6. **Sync OneNote**: Authorize access to OneNote.
 
 7. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
+<br>
 
 ### Subsequent Use (When logged in)
 
 1. **Run**: Double-click the OneNoteScheduler executable.
 
 2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
+<br>
 
 ## Authentication and API Flow Diagrams
 
@@ -51,7 +55,7 @@
 ### OneNote API development stack <br>
 - **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-- After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api.
+- After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api. <br>
 
 
 
