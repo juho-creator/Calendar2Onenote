@@ -1,6 +1,7 @@
 import os
 import webbrowser
 import msal
+import pyperclip    
 
 
 # APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
@@ -28,6 +29,7 @@ def generate_access_token(app_id,scopes):
         flow = client.initiate_device_flow(scopes) 
         print('user code: '+ flow['user_code']) 
         webbrowser.open(flow['verification_uri'])
+        pyperclip.copy(flow['user_code'])
         token_response = client.acquire_token_by_device_flow(flow)
 
     with open('api_token_access.json', 'w') as _f: 
