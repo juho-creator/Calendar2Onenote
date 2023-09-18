@@ -4,12 +4,6 @@ import msal
 import pyperclip    
 
 
-# APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
-# CLIENT_SECRET = "iqd8Q~S-4NVAndMGfea5Yf4ww6M1Oz36hMhwbb4q"
-# authority_url = "https://login.microsoftonline.com/consumers/"
-# base_url = "https://graph.microsoft.com/v1.0/"
-# SCOPES = ["User.Read","Notes.Read.All"]
-
 def generate_access_token(app_id,scopes):
 
     access_token_cache = msal.SerializableTokenCache()
@@ -36,6 +30,7 @@ def generate_access_token(app_id,scopes):
         _f.write(access_token_cache.serialize())
     return token_response
 
+# Print User Access Token
 if __name__ == '__main__':
     APP_ID = '98c8b6c2-6df4-4765-ac02-4c32cf868661' 
     SCOPES =  ['User.Read']
