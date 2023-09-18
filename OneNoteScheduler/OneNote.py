@@ -7,11 +7,7 @@ import bleach
 APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
 SCOPES = [
     "Notes.Create",
-    "Notes.Read",
-    "Notes.Read.All",
-    "Notes.ReadWrite",
-    "Notes.ReadWrite.All",
-    "Notes.ReadWrite.CreatedByApp"
+    "Notes.ReadWrite"
 ]
 
 
@@ -28,29 +24,32 @@ GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0'
 
 # Generate Notebook
 def CreateNoteBook(year):
-    # Create Notebook
+    # Request for creating Notebook
     notebook_endpoint = GRAPH_ENDPOINT + '/me/onenote/notebooks'
     request_body = {
         "displayName": year
     }
-
     response = requests.post(notebook_endpoint, headers=headers, json=request_body)
+
+    # Extract Notebook ID
     notebook = response.json()
     notebook_id = notebook["id"]
 
     # Return Notebook ID
     return notebook_id
 
+
 # Generate Section
 def CreateSection(month,notebook_id):
-    # Create Section
+    # Request for creating Section
     section_endpoint = GRAPH_ENDPOINT + f'/me/onenote/notebooks/{notebook_id}/sections'
     request_body = {
         "displayName": month
     }
     response = requests.post(section_endpoint, headers=headers, json=request_body)
+
+    # Extract Section ID
     section = response.json()
-    pprint(section)
     section_id = section["id"]
 
     #  Return Section ID
@@ -58,10 +57,9 @@ def CreateSection(month,notebook_id):
 
 
 
-
 # Generate Page
 def CreatePage(day, events, date, section_id):
-    # Create Page
+    # Request for creating Page
     headers = {
         'Authorization': 'Bearer ' + access_token['access_token'],
         'Content-type': 'text/html; charset=utf-8'  # Set charset to UTF-8
