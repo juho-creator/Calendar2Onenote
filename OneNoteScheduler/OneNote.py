@@ -68,10 +68,11 @@ def CreatePage(day, events, date, section_id):
     # Get page endpoint
     page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
 
-    # Check for matching values
+    # Find matching events
     matching_values = [bleach.clean(event) for key, value in events.items() for event in value if date in key]
     print(date,matching_values)
 
+    # Return matching events
     if matching_values:
         value_html = "".join([f"<p data-tag='to-do'>{value}</p>" for value in matching_values])
 
