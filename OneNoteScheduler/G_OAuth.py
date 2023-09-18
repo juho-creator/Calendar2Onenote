@@ -11,6 +11,7 @@ from pprint import pprint
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
 
+# Authenticate users google account
 def get_credentials():
     creds = None
 
@@ -31,7 +32,7 @@ def get_credentials():
     return creds
 
 
-
+# Get events from google calendar
 def retrieve_schedule(year):
     """Shows usage of the Google Calendar API to fetch events within a specified year."""
     creds = get_credentials()
@@ -81,7 +82,7 @@ def retrieve_schedule(year):
     except HttpError as error:
         print('An error occurred: %s' % error)
 
-
+# Display all events in a year
 if __name__ == '__main__':
     # Example usage:
     year = 2023
