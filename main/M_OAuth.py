@@ -30,10 +30,10 @@ def generate_access_token(app_id,scopes):
         _f.write(access_token_cache.serialize())
     return token_response
 
-# Print User Access Token
-if __name__ == '__main__':
-    APP_ID = '98c8b6c2-6df4-4765-ac02-4c32cf868661' 
-    SCOPES =  ['User.Read']
+# # Print User Access Token
+# if __name__ == '__main__':
+#     APP_ID = '98c8b6c2-6df4-4765-ac02-4c32cf868661' 
+#     SCOPES =  ['User.Read']
 
-    token_response = generate_access_token(APP_ID,SCOPES)
-    print(token_response['access_token'])
+#     token_response = generate_access_token(APP_ID,SCOPES)
+#     print(token_response['access_token'])
