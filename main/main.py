@@ -35,9 +35,11 @@ def index():
 
             # 2. Create sections for month
             for month in months:
+                # Creating {month}...
+
                 month_name = calendar.month_name[int(month)]
                 section_id = CreateSection(month_name, notebook_id)
-                
+
                 # Caculate number of days in a month
                 days = calendar.monthrange(int(year), int(month))[1]
                 
@@ -50,6 +52,7 @@ def index():
                         date = f'{year}-{month}-0{day}' # Create date format for checking
                     page_id = CreatePage(ordinal,events,date,section_id)
                     pprint(page_id)
+            # Created {month} : {section_id}
         except KeyError:
             return "Notebook Already exists"
     return render_template('index.html')
