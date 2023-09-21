@@ -15,7 +15,7 @@ creds = get_credentials()
 
 
 # Webpage for user input
-app = Flask(__name__)
+app = Flask(__name__, template_folder='../templates')
 webbrowser.open("http://127.0.0.1:5000")
 
 @app.route('/', methods=['GET', 'POST'])
