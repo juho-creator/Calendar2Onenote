@@ -12,7 +12,7 @@
 
 ### First-time Setup
 
-1. **Download**: Install OneNoteScheduler from the [Download link].
+1. **Download**: Install OneNoteScheduler from the [Download link](https://github.com/juho-creator/OneNoteSyncScheduler/releases).
 
 2. **Installation**: After downloading, double-click the OneNoteScheduler application to install it.
 
