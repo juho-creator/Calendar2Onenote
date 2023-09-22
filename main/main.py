@@ -46,3 +46,5 @@ try:
 
 except KeyError:
     print("Notebook Already exists")
+
+input("Press Enter to exit...")
