@@ -10,7 +10,8 @@ SCOPES = [
     "Notes.ReadWrite"
 ]
 
-
+# Setup Base Graph Endpoint
+GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0'
 
 # Generate access token
 access_token = generate_access_token(APP_ID, SCOPES)
@@ -18,25 +19,26 @@ headers = {
     'Authorization': 'Bearer ' + access_token['access_token']
 }
 
-# Base Graph Endpoint
-GRAPH_ENDPOINT = 'https://graph.microsoft.com/v1.0'
+
 
 
 # Generate Notebook
 def CreateNoteBook(year):
     # Request for creating Notebook
-    notebook_endpoint = GRAPH_ENDPOINT + '/me/onenote/notebooks'
-    request_body = {
-        "displayName": year
+    notebook_endpoint = GRAPH_ENDPOINT + '/me/onenote/notebooks' # Generate Notebook Endpoint
+    request_body = { # Generate Request Body
+        "displayName": str(year)
     }
     response = requests.post(notebook_endpoint, headers=headers, json=request_body)
 
     # Extract Notebook ID
-    notebook = response.json()
-    notebook_id = notebook["id"]
+    response_data = response.json()
+    notebook_url = response_data['links']['oneNoteWebUrl']['href']
+    notebook_id = response_data["id"]
 
+    
     # Return Notebook ID
-    return notebook_id
+    return notebook_url,notebook_id
 
 
 # Generate Section
@@ -49,10 +51,9 @@ def CreateSection(month,notebook_id):
     response = requests.post(section_endpoint, headers=headers, json=request_body)
 
     # Extract Section ID
-    section = response.json()
-    section_id = section["id"]
+    section_id = response.json()["id"]
 
-    #  Return Section ID
+    # Return Section ID
     return section_id
 
 
@@ -70,18 +71,20 @@ def CreatePage(day, events, date, section_id):
 
     # Find matching events
     matching_values = [bleach.clean(event) for key, value in events.items() for event in value if date in key]
-    print(date,matching_values)
 
     # Return matching events
     if matching_values:
         value_html = "".join([f"<p data-tag='to-do'>{value}</p>" for value in matching_values])
 
         # Encode the HTML data as UTF-8
-        html = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body>{value_html}</body></html>'
-        html_encoded = html.encode('utf-8')
+        html_encoded = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body>{value_html}</body></html>'.encode('utf-8')
     else:
         html_encoded = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body></body></html>'.encode('utf-8')
 
+
+    # Create a page
     response = requests.post(page_endpoint, headers=headers, data=html_encoded)
-    page = response.json()
-    pprint(page)
+
+    # Return log of page creations
+    page = response.json()    
+    return page
