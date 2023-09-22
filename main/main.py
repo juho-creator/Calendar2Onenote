@@ -11,22 +11,19 @@ from flask import Flask, request, render_template
 months = ['01', '02', '03', '04', '05', '06', '07', '08', '09','10', '11', '12']
 p = inflect.engine()
 
-
 creds = get_credentials()
-
 
 try:
     year = input("Input year > ")
+
+    print(f"\nCREATING NOTEBOOK FOR {year}")
+    print("It takes 5~10 min depending on your calendar so go grab yourself a coffee!\n")
 
     # Retrieve all events
     events = retrieve_schedule(int(year))
 
     # 1. Create Notebook
-    try:
-        notebook_url,notebook_id = CreateNoteBook(str(year))
-    except KeyError:
-        print("Exceeded Notebook Creation limit")
-        sys.exit(1)
+    notebook_url,notebook_id = CreateNoteBook(str(year))
 
     # 2. Create sections for month
     for month in months:
@@ -44,8 +41,8 @@ try:
                 date = f'{year}-{month}-{day}' # Create date format for checking
             else:
                 date = f'{year}-{month}-0{day}' # Create date format for checking
-            page_id = CreatePage(ordinal,events,date,section_id)
-    print(f"{year} Notebook Created : {notebook_url}")
+            page = CreatePage(ordinal,events,date,section_id)
+    print(f"\n{year} Notebook Created : {notebook_url}")
 
 except KeyError:
     print("Notebook Already exists")
