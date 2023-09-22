@@ -32,10 +32,13 @@ def CreateNoteBook(year):
     response = requests.post(notebook_endpoint, headers=headers, json=request_body)
 
     # Extract Notebook ID
-    notebook_id = response.json()["id"]
+    response_data = response.json()
+    notebook_url = response_data['links']['oneNoteWebUrl']['href']
+    notebook_id = response_data["id"]
 
+    
     # Return Notebook ID
-    return notebook_id
+    return notebook_url,notebook_id
 
 
 # Generate Section
