@@ -16,7 +16,7 @@
 
 2. **Run**: After downloading, double-click the OneNoteScheduler application to run it.
 
-3. **Microsoft Login**: Log in using your Microsoft account.
+3. **Microsoft Login**: Paste the automatically copied code and log in with your Microsoft account
 
 4. **Sync OneNote**: Authorize access to OneNote.
 
@@ -24,7 +24,7 @@
 
 6. **Sync Google Calendar**: Authorize access to fetch Google Calendar events.
 
-7. **Generate Scheduler**: Input the target year in the terminal to create a OneNote notebook with 12 monthly sections, automatically organizing events by date within each section. This may take 5-10 minutes.
+7. **Generate Scheduler**: Input the target year in the terminal to create a OneNote notebook with 12 monthly sections, automatically organizing events. This takes 5-10 minutes.
 <br>
 
 ### Subsequent Use (When logged in)
