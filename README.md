@@ -12,19 +12,19 @@
 
 ### First-time Setup
 
-1. **Download**: Install OneNoteScheduler from the [Download link](https://github.com/juho-creator/OneNoteSyncScheduler/releases).
+1. **Download**: Get OneNoteScheduler and Credentials.json from the [Download link](https://github.com/juho-creator/OneNoteSyncScheduler/releases) and place them in the same folder.
 
-2. **Installation**: After downloading, double-click the OneNoteScheduler application to install it.
+2. **Run**: After downloading, double-click the OneNoteScheduler application to run it.
 
-3. **Google Login**: Sign in to your Google account.
+3. **Microsoft Login**: Log in using your Microsoft account.
 
-4. **Sync Google Calendar**: Authorize access to fetch Google Calendar events.
+4. **Sync OneNote**: Authorize access to OneNote.
 
-5. **Microsoft Login**: Log in using your Microsoft account.
+5. **Google Login**: Sign in to your Google account.
 
-6. **Sync OneNote**: Authorize access to OneNote.
+6. **Sync Google Calendar**: Authorize access to fetch Google Calendar events.
 
-7. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
+7. **Generate Scheduler**: Input the target year in the terminal to create a OneNote notebook with 12 monthly sections, automatically organizing events by date within each section. This may take 5-10 minutes.
 <br>
 
 ### Subsequent Use (When logged in)
