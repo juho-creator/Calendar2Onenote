@@ -41,8 +41,8 @@
 <br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
-  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) account users without OneNoteScheduler having to need user credentials (using **api_token_access.json** created)
-  - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app)is able to create Onenote Notebook. <br>
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json** created)
+  - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app) is able to create Onenote Notebook. <br>
     
 
 ### Google OAuth2.0 & Google Calendar API (G_OAuth.py)
@@ -51,7 +51,7 @@
 
 - **Process**:
   - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials. (using **token.json** created)
-  - Once user authorize access to their Google Calendar events, OneNoteScheduler(3rd-party app)is able to get user calendar events using the Google Calendar API. <br>
+  - Once user authorize access to their Google Calendar events, OneNoteScheduler(3rd-party app) can fetch user calendar events using the Google Calendar API. <br>
 
 
 ### OneNote API development stack <br>
@@ -73,10 +73,14 @@
   - **Function**: Authenticates Microsoft account.
   
 - **Microsoft Graph API**: 
-  - **Documentation**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
+  - **Tutorial**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
   - **Module**: `OneNote.py`
   - **Function**: Creates a OneNote notebook with calendar events.
 
 
-
 ## Reference
+**Google Console Cloud** :
+**Google Calendar API** : 
+**Microsoft Azure** : 
+**Microsoft Graph API** : 
+**Onenote API** :
