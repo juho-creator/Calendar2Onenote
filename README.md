@@ -3,8 +3,9 @@
 **Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
 <br><br>
 
-## Demonstration
-[![Watch the Demonstration Video](https://img.youtube.com/vi/kQ-CY51pwEo/0.jpg)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
+## Demonstration Video
+Click on the image below to watch the video!
+[![Watch the Demonstration Video](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/73e36a8b-50f5-4c84-99f0-dc0a211c1673)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
 
 <!-- Add demonstration content here if applicable -->
 <br><br>
