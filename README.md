@@ -4,7 +4,8 @@
 <br><br>
 
 ## Demonstration
-[Demonstration video](https://www.youtube.com/watch?v=kQ-CY51pwEo)
+[![Watch the Demonstration Video](https://img.youtube.com/vi/kQ-CY51pwEo/0.jpg)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
+
 <!-- Add demonstration content here if applicable -->
 <br><br>
 
@@ -97,5 +98,3 @@
 
 ### Onenote API Documentation
 - [Learn More](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0)
-
-
