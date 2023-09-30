@@ -4,7 +4,6 @@
 <br><br>
 
 ## Demonstration Video
-Click on the image below to watch the video!
 [![Watch the Demonstration Video](https://img.youtube.com/vi/kQ-CY51pwEo/0.jpg)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
 
 <!-- Add demonstration content here if applicable -->
