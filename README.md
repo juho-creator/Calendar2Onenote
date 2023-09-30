@@ -6,7 +6,7 @@
 ## Demonstration
 [Demonstration video](https://www.youtube.com/watch?v=kQ-CY51pwEo)
 <!-- Add demonstration content here if applicable -->
-<br>
+<br><br>
 
 ## Usage
 
@@ -32,7 +32,7 @@
 1. **Run**: Double-click the OneNoteScheduler executable.
 
 2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
-<br>
+<br><br>
 
 ## Authentication and API Flow Diagrams
 
@@ -58,8 +58,7 @@
 - **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
 - After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api. <br>
-
-
+<br><br>
 
 ## Technologies Used 
 - **Google Calendar API**: 
@@ -77,7 +76,7 @@
   - **Module**: `OneNote.py`
   - **Function**: Creates a OneNote notebook with calendar events.
 
-
+<br><br>
 ## Reference
 **Getting started with  Google APIs**<br>
 https://www.youtube.com/watch?v=I5ili_1G0Vk
