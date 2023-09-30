@@ -78,29 +78,24 @@
 
 <br><br>
 ## Reference
-**Getting started with  Google APIs**<br>
-https://www.youtube.com/watch?v=I5ili_1G0Vk
 
-<br>
+### Getting Started with Google APIs
+- Video Tutorial: [Watch Here](https://www.youtube.com/watch?v=I5ili_1G0Vk)
 
-**Google Calendar API**<br>
-- tutorial: https://www.youtube.com/watch?v=1JkKtGFnua8&list=PL3JVwFmb_BnTO_sppfTh3VkPhfDWRY5on
-- documentation: https://developers.google.com/calendar/api/quickstart/python
-<br>
+### Google Calendar API
+- Tutorial Series: [Watch Here](https://www.youtube.com/watch?v=1JkKtGFnua8&list=PL3JVwFmb_BnTO_sppfTh3VkPhfDWRY5on)
+- Documentation: [Read Here](https://developers.google.com/calendar/api/quickstart/python)
 
-**Microsoft Azure**<br>
-tutorial https://www.youtube.com/watch?v=BErur8WwAsg&list=PL3JVwFmb_BnQ8zwvN4OmP-fYpwJXg47Z6
-<br>
+### Microsoft Azure
+- Tutorial Series: [Watch Here](https://www.youtube.com/watch?v=BErur8WwAsg&list=PL3JVwFmb_BnQ8zwvN4OmP-fYpwJXg47Z6)
 
-**Microsoft Graph API**<br>
-tutorial: https://www.youtube.com/watch?v=7ywUs54eGBo&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx
-<br>
+### Microsoft Graph API
+- Tutorial Series: [Watch Here](https://www.youtube.com/watch?v=7ywUs54eGBo&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx)
 
-**Onenote API testing with Microsoft Graph Explorer**
-tutorial: https://www.youtube.com/watch?v=VXd4OeQU1ek
+### Onenote API Testing with Microsoft Graph Explorer
+- Tutorial: [Watch Here](https://www.youtube.com/watch?v=VXd4OeQU1ek)
 
+### Onenote API Documentation
+- [Learn More](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0)
 
-**Onenote API**
-https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0
-<br>
 
