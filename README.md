@@ -36,17 +36,7 @@
 <br><br>
 
 ## Authentication and API Flow Diagrams
-
-### Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
-- **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
-<br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
-
-- **Process**:
-  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json** created)
-  - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app) is able to create Onenote Notebook. <br>
-    
-
-### Google OAuth2.0 & Google Calendar API (G_OAuth.py)
+### Step 1. Google OAuth2.0 & Google Calendar API (G_OAuth.py)
 - **Documentation**: [Google OAuth2.0 Documentation](https://developers.google.com/workspace/guides/auth-overview?hl=ko), [Google Calendar API Documentation](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
 <br>![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
@@ -55,29 +45,42 @@
   - Once user authorize access to their Google Calendar events, OneNoteScheduler(3rd-party app) can fetch user calendar events using the Google Calendar API. <br>
 
 
-### OneNote API development stack <br>
+
+
+### Step 2. Microsoft OAuth2.0 & Microsoft Graph API (M_OAuth.py, OneNote.py)
+- **Documentation**: [Microsoft Account Authentication & Microsoft Graph API Documentation](https://learn.microsoft.com/en-us/azure/active-directory/develop/msal-authentication-flows)
+<br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
+
+- **Process**:
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json** created)
+  - Once user authorize access to their Onenote, OneNoteScheduler(3rd-party app) is able to create Onenote Notebook. <br>
+    
+
+
+### Step 3. OneNote API development stack <br>
 - **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
 - After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events usin microsoft graph api that includes onenote api. <br>
 <br><br>
 
 ## Technologies Used 
-- **Microsoft Authentication Library (MSAL)**: 
-  - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
-  - **Modules**: `M_OAuth.py`
-  - **Function**: Authenticates Microsoft account.
   
 - **Google Calendar API**: 
   - **Documentation**: [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
   - **Module**: `G_OAuth.py`
-  - **Function**: Authenticates Google account and fetches calendar events.
+  - **Function**: Authenticates Google account for fetching user calendar events.
   
+- **Microsoft Authentication Library (MSAL)**: 
+  - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
+  - **Modules**: `M_OAuth.py`
+  - **Function**: Authenticates Microsoft account for Onenote.
+
 
   
 - **Microsoft Graph API**: 
   - **Tutorial**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
   - **Module**: `OneNote.py`
-  - **Function**: Creates a OneNote notebook with calendar events.
+  - **Function**: Creates a OneNote notebook with google calendar events.
 
 <br><br>
 ## Reference
