@@ -42,7 +42,9 @@
 
 - **Process**:
   - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials. (using **token.json**)
-  - Once user authorize access to their Google Calendar events, OneNoteScheduler can fetch user calendar events using the Google Calendar API. <br>
+  - Once user authorize access to their Google Calendar events, OneNoteScheduler can fetch user calendar events using the Google Calendar API. <br><br><br><br>
+
+
 
 
 
@@ -52,15 +54,16 @@
 <br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
-  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json**)
-  - Once user authorize access to their Onenote, OneNoteScheduler is given permission to create Onenote Notebook. <br>
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) account users without OneNoteScheduler having to need user credentials (using **api_token_access.json**)
+  - Once user authorize access to their Onenote, OneNoteScheduler is given permission to create a Onenote Notebook.
+  - OneNoteScheduler is now ready to use Microsoft Graph API <br><br><br><br>
     
 
 
 ### Step 3. OneNote API development stack <br>
 - **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-- After the authentication & authorization process, OneNoteScheduler is ready to create onenote page with all the google calendar events using Microsoft Graph API which includes Onenote API. <br>
+- After the authentication & authorization process, OneNoteScheduler creates a OneNote Notebook with google calendar events using Onenote API which is a part of Microsoft Graph API. <br>
 <br><br>
 
 ## Technologies Used 
