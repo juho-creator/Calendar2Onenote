@@ -41,7 +41,7 @@
 <br>![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
 - **Process**:
-  - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials. (using **token.json** created)
+  - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials. (using **token.json**)
   - Once user authorize access to their Google Calendar events, OneNoteScheduler can fetch user calendar events using the Google Calendar API. <br>
 
 
@@ -52,7 +52,7 @@
 <br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
-  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json** created)
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) users without OneNoteScheduler having to need user credentials (using **api_token_access.json**)
   - Once user authorize access to their Onenote, OneNoteScheduler is given permission to create Onenote Notebook. <br>
     
 
