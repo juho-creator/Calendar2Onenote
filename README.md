@@ -62,15 +62,17 @@
 <br><br>
 
 ## Technologies Used 
+- **Microsoft Authentication Library (MSAL)**: 
+  - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
+  - **Modules**: `M_OAuth.py`
+  - **Function**: Authenticates Microsoft account.
+  
 - **Google Calendar API**: 
   - **Documentation**: [Google Calendar API](https://developers.google.com/calendar/api/quickstart/python?hl=ko)
   - **Module**: `G_OAuth.py`
   - **Function**: Authenticates Google account and fetches calendar events.
   
-- **Microsoft Authentication Library (MSAL)**: 
-  - **Documentation**: [Microsoft Authentication Library (MSAL)](https://github.com/AzureAD/microsoft-authentication-library-for-python)
-  - **Modules**: `M_OAuth.py`
-  - **Function**: Authenticates Microsoft account.
+
   
 - **Microsoft Graph API**: 
   - **Tutorial**: [Microsoft Graph API](https://www.youtube.com/watch?v=AjOfAQCZsJU&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx&index=2)
