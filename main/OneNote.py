@@ -69,6 +69,8 @@ def CreatePage(day, events, date, section_id):
     # Get page endpoint
     page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
 
+########## CODE SMELL(remove for loop)
+########## (Use key to find value)
     # Find matching events
     matching_values = [bleach.clean(event) for key, value in events.items() for event in value if date in key]
 
