@@ -1,4 +1,6 @@
-# [한국어 README](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README%20(KR).md)
+[![한국어](https://img.shields.io/badge/lang-한국어-red.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README-KR.md)
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.md)
+</br>
 # OneNote Scheduler
 
 **Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
