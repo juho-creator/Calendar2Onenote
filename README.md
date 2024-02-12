@@ -103,6 +103,7 @@
 
 ### Microsoft Graph API
 - Tutorial Series: [Watch Here](https://www.youtube.com/watch?v=7ywUs54eGBo&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx)
+- [Try out Microsoft Graph here](https://developer.microsoft.com/en-us/graph/graph-explorer)
 
 ### Onenote API Testing with Microsoft Graph Explorer
 - Tutorial: [Watch Here](https://www.youtube.com/watch?v=VXd4OeQU1ek)
