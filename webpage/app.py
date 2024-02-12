@@ -8,6 +8,7 @@ def index():
     return render_template('index.html')
 
 
+# prints "hello world" without page refreshed  
 @app.route('/button_pressed', methods=['POST'])
 def button_pressed():
     print("Hello, world!")
