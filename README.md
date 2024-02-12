@@ -109,3 +109,6 @@
 
 ### Onenote API Documentation
 - [Learn More](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0)
+
+### Multilanguage README Pattern
+- [Learn More](https://github.com/jonatasemidio/multilanguage-readme-pattern?tab=readme-ov-file)
