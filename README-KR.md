@@ -1,3 +1,5 @@
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.exe.md)
+</br>
 # 원노트 스케줄러
 
 **개요:** OneNote Scheduler는 Google Calendar 일정을 OneNote노트로 생성하는 프로그램입니다.
