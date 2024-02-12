@@ -1,7 +1,6 @@
 from M_OAuth import generate_access_token
 from pprint import pprint
 import requests
-import bleach
 
 # Setup for Azure AD
 APP_ID = "98c8b6c2-6df4-4765-ac02-4c32cf868661"
@@ -59,7 +58,7 @@ def CreateSection(month,notebook_id):
 
 
 # Generate Page
-def CreatePage(day, events, date, section_id):
+def CreatePage(day, events, section_id):
     # Request for creating Page
     headers = {
         'Authorization': 'Bearer ' + access_token['access_token'],
@@ -69,14 +68,12 @@ def CreatePage(day, events, date, section_id):
     # Get page endpoint
     page_endpoint = GRAPH_ENDPOINT + f'/me/onenote/sections/{section_id}/pages'
 
-########## CODE SMELL(remove for loop)
-########## (Use key to find value)
-    # Find matching events
-    matching_values = [bleach.clean(event) for key, value in events.items() for event in value if date in key]
+
+
 
     # Return matching events
-    if matching_values:
-        value_html = "".join([f"<p data-tag='to-do'>{value}</p>" for value in matching_values])
+    if events:
+        value_html = "".join([f"<p data-tag='to-do'>{content}</p>" for content in events])
 
         # Encode the HTML data as UTF-8
         html_encoded = f'<!DOCTYPE html><html><head><meta charset="UTF-8"><title>{day}</title></head><body>{value_html}</body></html>'.encode('utf-8')
@@ -89,4 +86,5 @@ def CreatePage(day, events, date, section_id):
 
     # Return log of page creations
     page = response.json()    
+    pprint(page)
     return page

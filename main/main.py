@@ -6,13 +6,17 @@ import calendar
 from G_OAuth import retrieve_schedule
 import webbrowser
 from flask import Flask, request, render_template
+import time
 
 # Setting up date tracker
 months = ['01', '02', '03', '04', '05', '06', '07', '08', '09','10', '11', '12']
 p = inflect.engine()
 
+
+# Google calendar login
 creds = get_credentials()
 
+start = time.time()
 try:
     year = input("Input year > ")
 
@@ -20,11 +24,11 @@ try:
     print("It takes 5~10 min depending on your calendar so go grab yourself a coffee!\n")
 
     # Retrieve all events
-    events = retrieve_schedule(int(year))
-
+    all_events = retrieve_schedule(int(year))
+    
     # 1. Create Notebook
     notebook_url,notebook_id = CreateNoteBook(str(year))
-
+    print(all_events)
     # 2. Create sections for month
     for month in months:
         month_name = calendar.month_name[int(month)]
@@ -41,10 +45,21 @@ try:
                 date = f'{year}-{month}-{day}' # Create date format for checking
             else:
                 date = f'{year}-{month}-0{day}' # Create date format for checking
-            page = CreatePage(ordinal,events,date,section_id)
+            
+            # Find matching events
+            try:
+                events = all_events[date]
+            except:
+                events = ""
+            print(f"{date} : {events}")
+            page = CreatePage(ordinal,events,section_id)
+
     print(f"\n{year} Notebook Created : {notebook_url}")
 
-except KeyError:
+except Exception as e:
+    print(e)
     print("Notebook Already exists")
 
+print("--- %s seconds ---" % (time.time() - start))
 input("Press Enter to exit...")
+
