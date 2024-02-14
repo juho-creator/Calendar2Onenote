@@ -7,10 +7,9 @@
 
 <body>
     {% if session %}
-    <h1>Welcome {{name}}!</h1>
-    <p><a href="{{url_for('logout')}}">Logout</a></p>
+    <a href="/logout"><button>Google Logged in as {{name}}</button></a>
     {% else %}
-    <p><a href="{{url_for('googleLogin')}}">Login with Google</a></p>
+    <a href="/google-login"><button><img src="google_login.jpg" alt="Google Login"></button></a>
     {% endif %}
 </body>
 
