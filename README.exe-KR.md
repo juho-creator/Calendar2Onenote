@@ -89,7 +89,7 @@
   - **기능**: Google 캘린더 이벤트를 OneNote 노트북으로 생성합니다.
 
 <br><br>
-## 참고
+## 참고문헌
 
 ### Google API 시작하기
 - 비디오 튜토리얼: [여기에서 시청](https://www.youtube.com/watch?v=I5ili_1G0Vk)
