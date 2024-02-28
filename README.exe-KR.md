@@ -1,8 +1,8 @@
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.exe.md)
 </br>
-# 원노트 스케줄러
+# Calendar2Onenote
 
-**개요:** OneNote Scheduler는 Google Calendar 일정을 OneNote노트로 생성하는 프로그램입니다.
+**개요:** Calendar2Onenote는 Google Calendar 일정을 OneNote노트로 생성하는 프로그램입니다.
 <br><br>
 
 ## 시연 영상
@@ -15,9 +15,9 @@
 
 ### 처음 사용했을때
 
-1. **다운로드**: [다운로드 링크](https://github.com/juho-creator/OneNoteSyncScheduler/releases)에서 OneNoteScheduler.exe와 Credentials.json를 다운한 후 동일한 폴더에 넣습니다.
+1. **다운로드**: [다운로드 링크](https://github.com/juho-creator/OneNoteSyncScheduler/releases)에서 Calendar2Onenote.exe와 Credentials.json를 다운한 후 동일한 폴더에 넣습니다.
 
-2. **실행**: OneNoteScheduler.exe를 두 번 클릭하여 실행합니다.
+2. **실행**: Calendar2Onenote.exe를 두 번 클릭하여 실행합니다.
 
 3. **Microsoft 로그인**: 마이크로소프트 인증 창이 뜨면 자동으로 복사된 코드를 붙여넣고 Microsoft 계정으로 로그인합니다.
 
@@ -32,7 +32,7 @@
 
 ### 후속 사용 (이미 로그인한 경우)
 
-1. **실행**: OneNoteScheduler 실행 파일을 두 번 클릭합니다.
+1. **실행**: Calendar2Onenote 실행 파일을 두 번 클릭합니다.
 
 2. **스케줄 생성**: 목표 연도를 입력하여 12개의 월별 섹션으로 구성된 OneNote 노트북을 만듭니다. 이벤트는 각 섹션에 날짜별로 자동으로 구성됩니다.
 <br><br>
@@ -45,7 +45,7 @@
 
 - **과정**:
   - Google OAuth2.0은 사용자 자격 증명 없이 Google 계정 사용자를 인증합니다. (**token.json** 사용)
-  - 사용자가 Google Calendar 일정 액세스를 허용하면 OneNoteScheduler는 Google Calendar API를 이용해 구글 캘린더 일정을 가져올 수 있습니다. <br><br><br><br>
+  - 사용자가 Google Calendar 일정 액세스를 허용하면 Calendar2Onenote는 Google Calendar API를 이용해 구글 캘린더 일정을 가져올 수 있습니다. <br><br><br><br>
 
 
 
@@ -57,16 +57,16 @@
 <br>![Microsoft 계정 인증 및 Microsoft Graph API 플로우 다이어그램](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **과정**:
-  - Microsoft OAuth2.0인증을 통해 사용자 아이디 및 비밀번호를 OneNoteScheduler에 유출하지 않고 Microsoft(Onenote) 계정을 인증합니다. (**api_token_access.json** 사용)
-  - 사용자가 Onenote 액세스를 허용하면 OneNoteScheduler는 Onenote 노트북을 만들 수 있는 권한이 부여됩니다.
-  - OneNoteScheduler는 Microsoft Graph API를 이용해 OneNote를 생성할 권한이 부여됩니다.<br><br><br><br>
+  - Microsoft OAuth2.0인증을 통해 사용자 아이디 및 비밀번호를 Calendar2Onenote에 유출하지 않고 Microsoft(Onenote) 계정을 인증합니다. (**api_token_access.json** 사용)
+  - 사용자가 Onenote 액세스를 허용하면 Calendar2Onenote는 Onenote 노트북을 만들 수 있는 권한이 부여됩니다.
+  - Calendar2Onenote는 Microsoft Graph API를 이용해 OneNote를 생성할 권한이 부여됩니다.<br><br><br><br>
     
 
 
 ### 단계 3. OneNote API 개발 스택 <br>
 - **문서**: [OneNote REST API 문서](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![이미지](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-- 인증 및 권한 부여를 한 후 OneNoteScheduler는 Microsoft Graph API의 일부인 Onenote API를 사용하여 구글 캘린더 일정을 OneNote 노트북으로 생성합니다. <br>
+- 인증 및 권한 부여를 한 후 Calendar2Onenote는 Microsoft Graph API의 일부인 Onenote API를 사용하여 구글 캘린더 일정을 OneNote 노트북으로 생성합니다. <br>
 <br><br>
 
 ## 사용된 기술
