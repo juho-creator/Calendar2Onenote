@@ -16,7 +16,7 @@ def get_credentials():
     creds = None
 
     # Specify the path to the credentials.json file relative to the current working directory
-    credentials_path = os.path.join(os.getcwd(), 'credentials.json')
+    credentials_path = os.path.join(os.getcwd() + '\\Calendar2Onenote\\userfriendly_program', 'credentials.json')
 
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)

@@ -16,7 +16,7 @@ def get_credentials():
     creds = None
 
     # Specify the path to the credentials.json file relative to the current working directory
-    credentials_path = os.path.join(os.getcwd(), 'credentials.json')
+    credentials_path = os.path.join(os.getcwd() + '\\Calendar2Onenote\\program', 'credentials.json')
 
     if os.path.exists('token.json'):
         creds = Credentials.from_authorized_user_file('token.json', SCOPES)
@@ -82,9 +82,9 @@ def retrieve_schedule(year):
     except HttpError as error:
         print('An error occurred: %s' % error)
 
-# # Display all events in a year
-# if __name__ == '__main__':
-#     # Example usage:
-#     year = 2023
-#     events = retrieve_schedule(year)
-#     pprint(events)
+# Display all events in a year
+if __name__ == '__main__':
+    # Example usage:
+    year = 2023
+    events = retrieve_schedule(year)
+    pprint(events)
