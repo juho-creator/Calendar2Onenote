@@ -1,9 +1,9 @@
 [![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.exe.md)
 [![한국어](https://img.shields.io/badge/lang-한국어-red.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.exe-KR.md)
 </br>
-# OneNote Scheduler
+# Calendar2Onenote
 
-**Overview:** OneNote Scheduler is a program designed to create schedules in OneNote based on Google Calendar events.
+**Overview:** Calendar2Onenote is a program designed to create schedules in OneNote based on Google Calendar events.
 <br><br>
 
 ## Demonstration Video
@@ -16,9 +16,9 @@
 
 ### First-time Setup
 
-1. **Download**: Get OneNoteScheduler and Credentials.json from the [Download link](https://github.com/juho-creator/OneNoteSyncScheduler/releases) and place them in the same folder.
+1. **Download**: Get Calendar2Onenote and Credentials.json from the [Download link](https://github.com/juho-creator/OneNoteSyncScheduler/releases) and place them in the same folder.
 
-2. **Run**: After downloading, double-click the OneNoteScheduler application to run it.
+2. **Run**: After downloading, double-click the Calendar2Onenote application to run it.
 
 3. **Microsoft Login**: Paste the automatically copied code and log in with your Microsoft account
 
@@ -33,7 +33,7 @@
 
 ### Subsequent Use (When logged in)
 
-1. **Run**: Double-click the OneNoteScheduler executable.
+1. **Run**: Double-click the Calendar2Onenote executable.
 
 2. **Generate Scheduler**: Enter the target year to create a OneNote notebook with 12 monthly sections. Events will be automatically organized by date in the respective sections.
 <br><br>
@@ -44,8 +44,8 @@
 <br>![Google OAuth2.0 Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/26717732-7e98-4da7-b845-eebff57423e6)
 
 - **Process**:
-  - Google OAuth2.0 authenticates Google account users without OneNoteScheduler having to need user credentials. (using **token.json**)
-  - Once user authorize access to their Google Calendar events, OneNoteScheduler can fetch user calendar events using the Google Calendar API. <br><br><br><br>
+  - Google OAuth2.0 authenticates Google account users without Calendar2Onenote having to need user credentials. (using **token.json**)
+  - Once user authorize access to their Google Calendar events, Calendar2Onenote can fetch user calendar events using the Google Calendar API. <br><br><br><br>
 
 
 
@@ -57,16 +57,16 @@
 <br>![Microsoft Account Authentication & Microsoft Graph API Flow Diagram](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/e1df5d9b-e7e4-4e8f-8bba-fb4b8e718fab)
 
 - **Process**:
-  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) account users without OneNoteScheduler having to need user credentials (using **api_token_access.json**)
-  - Once user authorize access to their Onenote, OneNoteScheduler is given permission to create a Onenote Notebook.
-  - OneNoteScheduler is now ready to use Microsoft Graph API <br><br><br><br>
+  - Microsoft OAuth2.0 authenticates Microsoft(Onenote) account users without Calendar2Onenote having to need user credentials (using **api_token_access.json**)
+  - Once user authorize access to their Onenote, Calendar2Onenote is given permission to create a Onenote Notebook.
+  - Calendar2Onenote is now ready to use Microsoft Graph API <br><br><br><br>
     
 
 
 ### Step 3. OneNote API development stack <br>
 - **Documentation**: [OneNote REST API Documentation](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0) <br>
 ![image](https://github.com/juho-creator/OneNoteSyncScheduler/assets/72856990/df597c54-752f-44ed-9967-abe356bb24c2)
-- After the authentication & authorization process, OneNoteScheduler creates a OneNote Notebook with google calendar events using Onenote API which is a part of Microsoft Graph API. <br>
+- After the authentication & authorization process, Calendar2Onenote creates a OneNote Notebook with google calendar events using Onenote API which is a part of Microsoft Graph API. <br>
 <br><br>
 
 ## Technologies Used 
