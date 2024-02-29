@@ -1,4 +1,4 @@
-[![메인화면으로 돌아가기](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.md)
+[![메인화면으로 돌아가기](https://img.shields.io/badge/메인화면으로_돌아가기-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.md)
 
 </br>
 # Calendar2Onenote
