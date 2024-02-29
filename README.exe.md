@@ -1,6 +1,7 @@
 [![Return to mainpage](https://img.shields.io/badge/Return_to_mainpage-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
 
 </br>
+
 # Calendar2Onenote
 
 **Overview:** Calendar2Onenote is a program designed to create schedules in OneNote based on Google Calendar events.
@@ -89,6 +90,7 @@
   - **Function**: Creates a OneNote notebook with google calendar events.
 
 <br><br>
+
 ## Reference
 
 ### Getting Started with Google APIs
@@ -111,5 +113,3 @@
 ### Onenote API Documentation
 - [Learn More](https://learn.microsoft.com/en-us/graph/api/resources/onenote-api-overview?view=graph-rest-1.0)
 
-### Multilanguage README Pattern
-- [Learn More](https://github.com/jonatasemidio/multilanguage-readme-pattern?tab=readme-ov-file)
