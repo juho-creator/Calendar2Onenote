@@ -1,5 +1,5 @@
-[![한국어](https://img.shields.io/badge/lang-한국어-red.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.web-KR.md)
-[![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/OneNoteSyncScheduler/blob/main/README.web.md)
+[![Return to mainpage](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
+
 </br>
 # Reference 
 - Google Login Flask Tutorial (Without Button) : [Watch Here](https://www.youtube.com/watch?v=fZLWO3_V06Q)
