@@ -7,7 +7,7 @@
 **Overview:** Calendar2Onenote is a program designed to create schedules in OneNote based on Google Calendar events.
 <br><br>
 
-## Demonstration Video
+## Demonstration Video (Without GUI)
 [![Watch the Demonstration Video](https://img.youtube.com/vi/kQ-CY51pwEo/0.jpg)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
 
 <!-- Add demonstration content here if applicable -->

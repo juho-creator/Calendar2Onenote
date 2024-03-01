@@ -7,4 +7,5 @@ This is Calendar2Onenote with userfriendly interface
 </br>
 
 
-## Demonstration Video
+## Demonstration Video (With GUI)
+[[![Watch the Demonstration Video](http://i3.ytimg.com/vi/FyWcXeUISlw/hqdefault.jpg)](https://www.youtube.com/watch?v=FyWcXeUISlw)]

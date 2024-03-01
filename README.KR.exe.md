@@ -7,7 +7,7 @@
 **개요:** Calendar2Onenote는 Google Calendar 일정을 OneNote노트로 생성하는 프로그램입니다.
 <br><br>
 
-## 시연 영상
+## 시연 영상 (GUI 없음)
 [![시연 영상 시청하기](https://img.youtube.com/vi/kQ-CY51pwEo/0.jpg)](https://www.youtube.com/watch?v=kQ-CY51pwEo)
 
 <!-- 적용 가능한 경우 여기에 데모 콘텐츠 추가 -->
