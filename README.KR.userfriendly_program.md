@@ -2,6 +2,7 @@
 
 # GUI를 갖춘 Calendar2Onenote
 사용자 친화적인 인터페이스를 갖춘 Calendar2Onenote입니다.
+</br></br>
 
 ## 시연영상 (GUI 포함됨)
 [[![Watch the Demonstration Video](http://i3.ytimg.com/vi/FyWcXeUISlw/hqdefault.jpg)](https://www.youtube.com/watch?v=FyWcXeUISlw)]
