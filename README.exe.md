@@ -1,6 +1,5 @@
 [![Return to mainpage](https://img.shields.io/badge/Return_to_mainpage-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
 
-</br>
 
 # Calendar2Onenote
 
