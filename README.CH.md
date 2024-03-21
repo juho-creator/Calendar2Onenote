@@ -1,0 +1,13 @@
+
+
+# Calendar2Onenote
+- [在网络浏览器上尝试 Calendar2Onenote](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.web.md)（正在开发中）
+- [Calendar2Onenote 开发人员程序](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.exe.md)
+- [Calendar2Onenote 用户友好程序](https://github.com/juho-creator/Calendar2Onenote/tree/main/README.userfriendly_program.md)
+
+## Reference
+### Multilanguage README Pattern
+- [Learn More](https://github.com/jonatasemidio/multilanguage-readme-pattern?tab=readme-ov-file)
+
+### Markdown Badge  
+- [Learn More](https://shields.io/badges)
