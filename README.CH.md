@@ -8,9 +8,12 @@
 - [Calendar2Onenote 开发人员程序](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.CH.exe.md)
 - [Calendar2Onenote 用户友好程序](https://github.com/juho-creator/Calendar2Onenote/tree/main/README.CH.userfriendly_program.md)
 
-## Reference
-### Multilanguage README Pattern
-- [Learn More](https://github.com/jonatasemidio/multilanguage-readme-pattern?tab=readme-ov-file)
+</br>
 
-### Markdown Badge  
-- [Learn More](https://shields.io/badges)
+  
+## 参考
+### 多语言 README 模式
+- [了解更多](https://github.com/jonatasemidio/multilanguage-readme-pattern?tab=readme-ov-file)
+
+### Markdown 徽章  
+- [了解更多](https://shields.io/badges)
