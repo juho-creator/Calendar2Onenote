@@ -1,4 +1,4 @@
-[![English](https://img.shields.io/badge/lang-영어-blue.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
+[![English](https://img.shields.io/badge/lang-English-blue.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
 [![汉语](https://img.shields.io/badge/lang-汉语-green.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.CH.md)
 
 # Calendar2Onenote
