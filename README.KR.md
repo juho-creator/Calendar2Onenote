@@ -1,4 +1,5 @@
 [![English](https://img.shields.io/badge/lang-영어-blue.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
+[![汉语](https://img.shields.io/badge/lang-汉语-green.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.CH.md)
 
 # Calendar2Onenote
 - [웹 브라우저에서 Calendar2Onenote 사용](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.web.md) (개발 중)
