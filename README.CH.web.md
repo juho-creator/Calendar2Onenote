@@ -1,4 +1,4 @@
-[![返回主页](https://img.shields.io/badge/返回主页-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.md)
+[![返回主页](https://img.shields.io/badge/返回主页-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.CH.md)
 
 
 
