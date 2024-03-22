@@ -1,5 +1,4 @@
-[![English](https://img.shields.io/badge/English-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.md)
-[![한국어](https://img.shields.io/badge/한국어-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.md)
+[![返回主页](https://img.shields.io/badge/返回主页-blueviolet.svg)](https://github.com/juho-creator/Calendar2Onenote/blob/main/README.KR.md)
 
 
 
