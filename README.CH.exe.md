@@ -58,7 +58,7 @@
 
 - **过程**:
   - Microsoft OAuth2.0 对 Microsoft（Onenote）帐户用户进行身份验证，无需 Calendar2Onenote 需要用户凭据（使用 **api_token_access.json**）
-  - 一旦用户授权访问其 Onenote，Calendar2Onenote 就被授予创建 a Onenote 笔记本的权限。
+  - 一旦用户授权访问其 Onenote，Calendar2Onenote 就被授予创建 一个 Onenote 笔记本的权限。
   - Calendar2Onenote 现在可以使用 Microsoft Graph API <br><br><br><br>
     
 
