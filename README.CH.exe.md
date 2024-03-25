@@ -108,7 +108,7 @@
 ### Microsoft Graph API
 
 - 教程系列: [点击此处观看](https://www.youtube.com/watch?v=7ywUs54eGBo&list=PL3JVwFmb_BnT9Ti0MMRj5nPF7XoN-4MQx)
-- 尝试 Microsoft Graph : [这里](https://developer.microsoft.com/en-us/graph/graph-explorer)
+- 尝试 Microsoft Graph : [点击此处观看](https://developer.microsoft.com/en-us/graph/graph-explorer)
 
 ### 使用 Microsoft Graph Explorer 进行 Onenote API 测试
 
